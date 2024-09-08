@@ -50,9 +50,9 @@ async def start(event):
                       buttons=[
                               [Button.inline("SET THUMB.📸", data="set"),
                                Button.inline("REM THUMB.📸", data="rem")],
-                              [Button.url("Updates ⚡", url="https://t.me/ChotuBots"),
-                               Button.url("Support 💌", url="http://t.me/+UwkDHFPuRMRkMmI1")],
-                              [Button.url("Developer 🧑‍💻", url="t.me/PiroChotu")]
+                              [Button.url("Channel ⚡", url="https://t.me/tapori420_Official"),
+                               Button.url("Support 💌", url="https://t.me/taporibot_bot")],
+                              [Button.url("Developer 🧑‍💻", url="https://t.me/taporibot_bot")]
                               ])
     '''
     await event.reply(text, 
