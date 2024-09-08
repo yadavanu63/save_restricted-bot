@@ -103,19 +103,19 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 5
+        timer = 3
         if i < 25:
-            timer = 5
+            timer = 3
         elif i < 50 and i > 25:
-            timer = 5
+            timer = 2
         elif i < 100 and i > 50:
-            timer = 5
+            timer = 3
         elif i < 1250 and i > 1000:
-            timer = 5
+            timer = 3
         elif i < 1500 and i > 1250:
-            timer = 5
+            timer = 3
         elif i < 2000 and i > 1500:
-            timer = 5
+            timer = 3
         elif i < 2500 and i > 2000:
             timer = 5
         elif i < 3000 and i > 2500:
