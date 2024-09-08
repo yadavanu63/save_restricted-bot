@@ -14,27 +14,27 @@
     "env": {
             "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
-            "value": "6814101098c5b74fbd07ee76b14129e3"
+            "value": "a98b5be0127986be1cc2553dbd99765e"
         },
         "API_ID": {
             "description": "Your API ID from my.telegram.org",
-            "value": "20172532"
+            "value": "24478182"
         },
         "BOT_TOKEN": {
             "description": "Bot token, get it from @BotFather.",
-            "value": "6968487291:AAGFoDTmWxKyKqLgc19HTOjoyX5vOebwoiY"
+            "value": "7039712051:AAFq_faxd8gQtRl7W4uB6WLemh6bjZTczjY"
         },
         "SESSION": {
             "description": "Pyrogram string session.",
-            "value": "BQEzzvQAYunvo6z7Oh_HE9T11uOotrZR56w9sdEzowFiWGb_JRlRmLOhzOW9Y0t3seSJMwMZsprV4pr-SKapga6CkZi3d-ymtAld9EjAxb0-tICQ2f5bJn1dW-MM4ZiI3OovXJ8W5-39x_w8PSEybpfV0wr1FPf9ZLJsB3Ur3OKvJqycaBItHcuwTjrAT1lbGB8UNzqALZszHWwOmOBVO6eHViWW2EZph-Koj4RuumeaNvTBGvvMJXMn6idxWnd-hkqzc2RN2znsj8k7OL2dhKMJ4qkhWwgvOBO7h7Qh0rF0Vqqdpl4BGYMhP51IUqznpWvjIICPFUXGAd0JeYIDpOlc26MpYQAAAAF6f30wAA"
+            "value": "BQFqkxUAsqXVgmIe2vVm0qt_eruFzW9UKeTJfFp0zD8Ta3hdxTHJ_pCHfYAuo20u2N2sihRDbG3Rr4D6NeBwbF8xG7uhFT2h49n-4hjwkbPWD1EHcehlJ3GuTAuRU2RCyuGJDuMyZB7IaQETM2FOQ9naG31UGr_6t7ulc57_yKvJzZtyrTrZh02tESFOUqpKksDH1BT5JzI1AubstIrhjiiNFXyidX8dy5RIkXRq7FpKmNqB8KnMrSD2f7p36fL99hG5oBSTUhE-_IbyT9uUjVRH2faBgh5XCg9zQnMU4kCSQAA6diwh-oUw-q8Znu08Cu4TAPhXiMbZrUgKcHQU1P5Q2rdhyQAAAABUaoPFAA"
         },
         "AUTH": {
             "description": "User ID of Bot owner.",
-            "value": "6570693189"
+            "value": "6395950392"
         },
         "FORCESUB": {
             "description": "Username name of public channel without using '@'.",
-            "value": "ChotuBots"
+            "value": "tapori420_Official"
         }
     },
     "stack": "container"
