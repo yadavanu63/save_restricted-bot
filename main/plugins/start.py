@@ -51,7 +51,7 @@ async def start(event):
                               [Button.inline("SET THUMB.📸", data="set"),
                                Button.inline("REM THUMB.📸", data="rem")],
                               [Button.url("Channel ⚡", url="https://t.me/tapori420_Official"),
-                               Button.url("Support 💌", url="https://t.me/taporibot_bot")],
+                               Button.url("Support 💌", url="https://t.me/tapori420_Official")],
                               [Button.url("Developer 🧑‍💻", url="https://t.me/taporibot_bot")]
                               ])
     '''
@@ -59,7 +59,7 @@ async def start(event):
                       buttons=[
                               [Button.inline("SET THUMB.📸", data="set"),
                                Button.inline("REM THUMB.📸", data="rem")],
-                              [Button.url("Maintained and Modified by", url="t.me/xTnmgbR6rjgCDF7iPoFfiN8YfBsez9Lv")]
+                              [Button.url("Maintained and Modified by", url="https://t.me/tapori420_Official")]
                               ])
     '''
     
