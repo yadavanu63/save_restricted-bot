@@ -82,8 +82,13 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
         # Group: t.me/groupname/123
         chat_username = msg_link.split("/")[-2]
         try:
-            entity = await userbot.get_entity(chat_username)
-            chat = entity.id
+            # pehle save id check kar
+            if chat_username in joined_groups:
+                chat = joined_groups[chat_username]
+            else:
+                entity = await userbot.get_entity(chat_username)
+                chat = entity.id
+                joined_groups[chat_username]
         except Exception as e:
             await client.edit_message_text(sender, edit_id, "Group not found or bot not joined!")
             logging.info(f"Entity error: {e}")
