@@ -73,7 +73,7 @@ async def _batch(event):
                 return await conv.send_message("**Cannot wait more longer for your response!❌**")
             try:
                 value = int(_range.text)
-                if value > 10000:
+                if value > 500:
                     return await conv.send_message("**You can only get upto 10000 files in a single batch.**")
             except ValueError:
                 return await conv.send_message("**Range must be an integer!**")
@@ -103,55 +103,24 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 3
-        if i < 25:
-            timer = 3
-        elif i < 50 and i > 25:
-            timer = 2
-        elif i < 100 and i > 50:
-            timer = 3
-        elif i < 1250 and i > 1000:
-            timer = 3
-        elif i < 1500 and i > 1250:
-            timer = 3
-        elif i < 2000 and i > 1500:
-            timer = 3
-        elif i < 2500 and i > 2000:
-            timer = 5
-        elif i < 3000 and i > 2500:
-            timer = 5
-        elif i < 3500 and i > 3000:
-            timer = 5
-        elif i < 4000 and i > 3500:
-            timer = 5
-        elif i < 4500 and i > 4000:
-            timer = 5
-        elif i < 5000 and i > 4500:
-            timer = 5
-        elif i < 5500 and i > 5000:
-            timer = 5
-        elif i < 6000:
-            timer = 5
-        elif i < 6500:
-            timer = 5
-        elif i < 7000:
-            timer = 5
-        elif i < 7500:
-            timer = 5
-        elif i < 8000: 
-            timer = 5
-        elif i < 8500: 
-            timer = 5
-        elif i < 9000:
-            timer = 5
-        elif i < 9500: 
-            timer = 5
-        elif i < 10000: 
-            timer = 5
-        
+        timer = 15
+        if i < 250:
+            timer = 20
+        elif 250 <= i < 1000:
+            timer = 25
+        elif 1000 <= i < 10000:
+            timer = 30
+        elif 10000 <= i < 50000:
+            timer = 35
+        elif 50000 <= i < 100000:
+            timer = 40
+        elif 100000 <= i < 200000:
+            timer = 45
+        elif i >= 200000:
+            timer = 60  # Increased timer value for larger counts
         
         if 't.me/c/' not in link:
-            timer = 2 if i < 25 else 3
+            timer = 10 if i < 500 else 30
         try: 
             count_down = f"**Batch process ongoing.⚡️**\n\nProcess completed✅: {i+1}"
             #a =ids[i]
@@ -179,7 +148,7 @@ async def run_batch(userbot, client, sender, countdown, link):
                 ids.clear()
                 break
             else:
-                fw_alert = await client.send_message(sender, f'**Sleeping for {fw.value + 5} second(s) due to telegram flooodwait.**')
+                fw_alert = await client.send_message(sender, f'**Sleeping for {fw.value + 15} second(s) due to telegram flooodwait.**')
                 ors = fw.value + 5
                 await asyncio.sleep(ors)
                 await fw_alert.delete()
