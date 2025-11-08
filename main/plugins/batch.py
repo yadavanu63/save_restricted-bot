@@ -64,7 +64,7 @@ async def _batch(event):
                 #print(e)
                 logger.info(e)
                 return await conv.send_message("**Cannot wait more longer for your response!❌Retry**")
-            await conv.send_message("**Send me the number of files/range you want to save from the given message, as a reply to this message.🤔**", buttons=Button.force_reply())
+            await conv.send_message("**How many messages do you want to process?/nMax limit 500**", buttons=Button.force_reply())
             try:
                 _range = await conv.get_reply()
             except Exception as e:
@@ -74,7 +74,7 @@ async def _batch(event):
             try:
                 value = int(_range.text)
                 if value > 500:
-                    return await conv.send_message("**You can only get upto 10000 files in a single batch.**")
+                    return await conv.send_message("**You can only get upto 500 files in a single batch.**")
             except ValueError:
                 return await conv.send_message("**Range must be an integer!**")
             for i in range(value):
