@@ -64,7 +64,7 @@ async def _batch(event):
                 #print(e)
                 logger.info(e)
                 return await conv.send_message("**Cannot wait more longer for your response!❌Retry**")
-            await conv.send_message("**How many messages do you want to process?/nMax limit 500**", buttons=Button.force_reply())
+            await conv.send_message("**How many messages do you want to process?\nMax limit 500**", buttons=Button.force_reply())
             try:
                 _range = await conv.get_reply()
             except Exception as e:
@@ -103,21 +103,21 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 15
+        timer = 10
         if i < 250:
-            timer = 20
+            timer = 10
         elif 250 <= i < 1000:
-            timer = 25
+            timer = 12
         elif 1000 <= i < 10000:
-            timer = 30
+            timer = 14
         elif 10000 <= i < 50000:
-            timer = 35
+            timer = 16
         elif 50000 <= i < 100000:
-            timer = 40
+            timer = 18
         elif 100000 <= i < 200000:
-            timer = 45
+            timer = 20
         elif i >= 200000:
-            timer = 60  # Increased timer value for larger counts
+            timer = 30  # Increased timer value for larger counts
         
         if 't.me/c/' not in link:
             timer = 10 if i < 500 else 30
